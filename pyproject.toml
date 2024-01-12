@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "gerar-xml-protheus"
+version = "0.1.0"
+description = ""
+authors = ["Marcos Felipe <plimo263@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "gerar_xml_protheus" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pymssql = "^2.2.11"
+taskipy = "^1.12.2"
+python-dotenv = "^1.0.0"
+pandas = "^2.1.4"
+openpyxl = "^3.1.2"
+argparse = "^1.4.0"
+
+[tool.taskipy.tasks]
+run = { cmd = 'python3 main.py', help = 'Executa o arquivo usando valor de teste' }
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
