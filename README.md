@@ -13,7 +13,19 @@ apenas um comando, basta você ter a chave da nota fiscal e então passar a chav
 
 Por ser um projeto feito em Python você vai precisar ter o Python instalado na sua máquina, este projeto foi desenvolvido usando o Poetry, que é uma ferramenta para gerenciamento de dependências mas pode ser utilizado com virtualenv também ou executado em ambiente local.
 
-Com o Poetry instalado basta executar o comando
+Mas antes de tudo você precisa configurar as credenciais de acesso ao banco de dados. O arquivo .env_example é a base das variaveis que você precisa configurar, copie este arquivo e cole o seu conteudo em um outro arquivo chamado .env. O seu conteúdo é o seguinte:
+
+```
+
+USER_MSSQL = '' # Usuario de acesso ao banco
+PASSWD_MSSQL = '' # Senha de acesso ao banco
+DB_MSSQL = '' # Banco de dados em si
+SERVER_MSSQL = '' # Servidor onde esta o banco
+PORT_MSSQL = '' # Numero da porta de acesso ao banco.
+
+```
+
+Após isso, com o Poetry instalado basta executar o comando
 
 ```
 poetry shell
